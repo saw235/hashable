@@ -123,9 +123,6 @@ library
   if !impl(ghc >=9.2)
     build-depends: base-orphans >=0.8.6 && <0.10
 
-  if impl(ghc < 9.4)
-    build-depends: data-array-byte >=0.1.0.1 && <0.2
-
   -- Integer internals
   if impl(ghc >=9)
     build-depends: ghc-bignum >=1.0 && <1.4
@@ -233,9 +230,6 @@ test-suite xxhash-tests
   includes:
     HsXXHash.h
     xxhash.h
-
-  if impl(ghc < 9.4)
-    build-depends: data-array-byte >=0.1.0.1 && <0.2
 
 test-suite hashable-examples
   type:             exitcode-stdio-1.0
